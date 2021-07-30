@@ -1,7 +1,7 @@
 version: 0.2
 
 batch:
-  fast-fail: true
+  fast-fail: false
   build-list:
     - identifier: linux_small
       env:
@@ -12,7 +12,7 @@ batch:
         compute-type: BUILD_GENERAL1_MEDIUM
         variables:
           BUILD_MEDIUM: 2
-      ignore-failure: false
+      ignore-failure: true
     - identifier: linux_large
       env:
         compute-type: BUILD_GENERAL1_LARGE
