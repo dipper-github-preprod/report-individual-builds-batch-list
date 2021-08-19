@@ -6,17 +6,17 @@ batch:
     - identifier: linux_small
       env:
         compute-type: BUILD_GENERAL1_SMALL
-      ignore-failure: false
+      ignore-failure: true
     - identifier: linux_medium
       env:
         compute-type: BUILD_GENERAL1_MEDIUM
         variables:
           BUILD_MEDIUM: 2
-      ignore-failure: false
+      ignore-failure: true
     - identifier: linux_large
       env:
         compute-type: BUILD_GENERAL1_LARGE
-      ignore-failure: false
+      ignore-failure: true
 
 
 phases:
