@@ -1,7 +1,7 @@
 version: 0.2
 
 batch:
-  fast-fail: true
+  fast-fail: false
   build-list:
     - identifier: linux_small
       env:
@@ -31,7 +31,7 @@ phases:
       - echo 'Compiling the Java Code'
       - echo 'Test'
       - javac -cp . HelloWorld.java
-      - if [ $BUILD_MEDIUM -gt 1 ]; then fail; fi
+      - if [ $CODEBUILD_BUILD_NUMBER -gt 5 ]; then fail; fi
   post_build:
     commands:
       - echo "Would deploy here"
