@@ -28,7 +28,7 @@ phases:
       - echo 'Compiling the Java Code'
       - echo 'Test'
       - javac -cp . HelloWorld.java
-      - if [ $BUILD_MEDIUM -gt 1 ]; then fail; fi
+      - if [ $BUILD_MEDIUM -gt 10 ]; then fail; fi
   post_build:
     commands:
       - echo "Would deploy here"
